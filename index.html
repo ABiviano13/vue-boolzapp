@@ -17,14 +17,28 @@
     </div>
     <div class="container-main d-flex">
         <section class="scrollbar-contacts d-flex flex-column">
-            <div class="bar">
-                
+            <div class="bar bar-me">
+                <ul class="list-group list-group-flush d-flex justify-content-between">
+                    <li class="list-group-item d-flex align-items-center justify-content-between">
+                        <div class="text px-2 d-flex align-items-center gap-2">
+                            <img src="./img/wanda.jpg" class="rounded-circle" alt="wanda">
+                            <div class="user-name">
+                                Wanda (me)
+                            </div>
+                        </div>
+                        <div class="button d-flex gap-2">
+                            <i class="fa-solid fa-circle-notch"></i>
+                            <i class="fa-solid fa-message"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </li>
+                </ul>
             </div>
             <div class="notificationsonoff d-flex align-items-center">
                 <i class="bell fa-regular fa-bell-slash rounded-circle"></i>
                 <div class="text-notification px-2">
                     <div class="text">
-                        Ricevi notifiche di nuovi messaggio
+                        Ricevi notifiche di nuovi messaggi
                     </div>
                     <a class="a-text">
                         Attiva notifiche Desktop
@@ -32,6 +46,12 @@
                 </div>
             </div>
             <div class="chat-contacts flex-grow-1">
+                <div class="input-group input-group-sm">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Cerca o inizia una nuova chat">
+                </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item d-flex align-items-center">
                         <img src="./img/blackpanther.jpg" class="rounded-circle" alt="blackpanther">

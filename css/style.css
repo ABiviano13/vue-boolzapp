@@ -2,9 +2,15 @@
     --var--green: #009688;
     ---var--beigegreen: #dadbd3;
     --var--lightgray: #eaeaea;
+    --var--lightgraydark: lightgray;
     --var--white: white;
+    --var--gray: gray;
     --var--skyblue: #8edafd;
     --var--beige: #f3eeea;
+}
+
+button{
+    border: none;
 }
 
 img{
@@ -38,19 +44,26 @@ img{
 }
 
 .scrollbar-contacts{
-    width: 557px;
+    width: 540px;
     background-color: var(--var--white);
 }
 
 .bar, 
 .notificationsonoff,
 .input-chat{
-    flex-basis: 10%;
+    flex-basis: 5%;
 }
 
-.bar{
+.bar,
+.bar-me .list-group-item{
     background-color: var(--var--lightgray);
+    border: none;
 }
+
+.button{
+    color: var(--var--gray);
+}
+
 
 .notificationsonoff{
     background-color: var(--var--skyblue);
@@ -60,7 +73,7 @@ img{
 
 .a-text{
     text-decoration: underline;
-    color: gray;
+    color: var(--var--gray);
 }
 
 .bell{
@@ -69,6 +82,10 @@ img{
     padding: 15px;
     font-size: 22px;
     text-align: center;
+}
+
+.input-group{
+    border: 10px solid transparent;
 }
 
 .chat{
@@ -89,5 +106,5 @@ img{
 
 .last-massage,
 .time{
-    color: lightgrey;
+    color: var(--var--lightgraydark);
 }
