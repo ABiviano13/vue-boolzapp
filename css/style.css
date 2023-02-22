@@ -54,6 +54,21 @@ img{
 
 .notificationsonoff{
     background-color: var(--var--skyblue);
+    padding: 15px;
+
+}
+
+.a-text{
+    text-decoration: underline;
+    color: gray;
+}
+
+.bell{
+    background-color: var(--var--white);
+    color: var(--var--skyblue);
+    padding: 15px;
+    font-size: 22px;
+    text-align: center;
 }
 
 .chat{
