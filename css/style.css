@@ -1,12 +1,21 @@
+:root{
+    --var--green: #009688;
+    ---var--beigegreen: #dadbd3;
+    --var--lightgray: #eaeaea;
+    --var--white: white;
+    --var--skyblue: #8edafd;
+    --var--beige: #f3eeea;
+}
+
 .aesthetic-header{
     height: 151px;
     width: 100%;
-    background-color: #009688;
+    background-color: var(--var--green);
 }
 
 .aesthetic-main{
     height: 100vh;
-    background-color: #dadbd3;
+    background-color: var(---var--beigegreen);
 }
 
 .container-main{
@@ -20,11 +29,29 @@
     z-index: 9999;
 }
 
-.container-main *{
-    height: 100%;
-}
-
 .scrollbar-contacts{
     width: 557px;
-    background-color: white;
+    background-color: var(--var--white);
+}
+
+.bar, 
+.notificationsonoff,
+.input-chat{
+    flex-basis: 10%;
+}
+
+.bar{
+    background-color: var(--var--lightgray);
+}
+
+.notificationsonoff{
+    background-color: var(--var--skyblue);
+}
+
+.chat{
+    overflow: scroll;
+}
+
+.input-chat{
+    background-color: var(--var--beige);
 }
