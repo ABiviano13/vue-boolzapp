@@ -59,7 +59,7 @@
                         <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Cerca o inizia una nuova chat">
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item d-flex align-items-center" v-for="contact in arrayContacts">
+                        <li class="list-group-item d-flex align-items-center" v-for="(contact, index) in arrayContacts" @click="setCurrentContact(index)">
                             <img :src="contact.avatar" class="rounded-circle" alt="">
                             <div class="text px-2">
                                 <div class="d-flex justify-content-between"> 
@@ -101,7 +101,7 @@
                 </div>
                 <div class="chat flex-grow-1">
     
-                    <div class="card mb-1" :class="(message.status !== 'received' ? 'sent' : '')" v-for="(message, index) in arrayContacts[currentContact].messages">
+                    <div class="card mb-1 " :class=" message.status !== 'received' ? 'sent' : '' " v-for="(message, index) in arrayContacts[currentContact].messages">
                         <div class="card-body">
                           <p class="card-text">
                             {{message.message}}
@@ -111,7 +111,6 @@
                             11:20
                         </div>
                     </div>
-    
     
                 </div>
                 <div class="input-chat">

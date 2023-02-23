@@ -179,15 +179,17 @@ createApp({
         return {
             arrayContacts: contacts,
             currentContact: currentIndex, 
-            className: ''
         }
     },
     methods: {
-        setCurrentContact(indice){
-            console.log('cliccato');
-            if (indice === this.currentContact) {
-                this.className == ' active'
-            }
+        // isTime(){
+        //     const arrayDate = this.arrayContacts.messages.date.split('');
+        //     console.log(arrayDate)
+        // },
+
+        setCurrentContact(index){
+            console.log('cliccato')
+            return this.currentContact = index;
         },
     }
 }).mount('#app')
