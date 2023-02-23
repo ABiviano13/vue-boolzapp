@@ -180,3 +180,12 @@ img{
     background-color: var(--var--lightgreen);
     align-self: flex-end;
 }
+
+
+.chat-section .list-group-item.active-contact{
+    display: flex;
+}
+
+.chat-section .list-group-item{
+    display: none;
+}

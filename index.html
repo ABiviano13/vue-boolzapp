@@ -75,166 +75,37 @@
                                 </div>
                             </div>
                         </li>
-
-                        <!-- <li class="list-group-item d-flex align-items-center">
-                            <img src="./img/blackpanther.jpg" class="rounded-circle" alt="blackpanther">
-                            <div class="text px-2">
-                                <div class="d-flex justify-content-between"> 
-                                    <div class="user-name">
-                                        T'Challa
-                                    </div>
-                                    <div class="time">
-                                        12:00
-                                    </div>
-                                </div>
-                                <div class="last-massage">
-                                    Ultimo messaggio inviato
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item d-flex align-items-center">
-                            <img src="./img/blackwidow.jpg" class="rounded-circle" alt="blackwidow">
-                            <div class="text px-2">
-                                <div class="d-flex justify-content-between"> 
-                                    <div class="user-name">
-                                        Natasha Romanoff
-                                    </div>
-                                    <div class="time">
-                                        12:00
-                                    </div>
-                                </div>
-                                <div class="last-massage">
-                                    Ultimo messaggio inviato
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item d-flex align-items-center">
-                            <img src="./img/capitanamerica.jpg" class="rounded-circle" alt="capitanamerica">
-                            <div class="text px-2">
-                                <div class="d-flex justify-content-between"> 
-                                    <div class="user-name">
-                                        Steve Rogers
-                                    </div>
-                                    <div class="time">
-                                        12:00
-                                    </div>
-                                </div>
-                                <div class="last-massage">
-                                    Ultimo messaggio inviato
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item d-flex align-items-center">
-                            <img src="./img/captainmarvel.jpg" class="rounded-circle" alt="capitanmarvel">
-                            <div class="text px-2">
-                                <div class="d-flex justify-content-between"> 
-                                    <div class="user-name">
-                                        Carol Darvers
-                                    </div>
-                                    <div class="time">
-                                        12:00
-                                    </div>
-                                </div>
-                                <div class="last-massage">
-                                    Ultimo messaggio inviato
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item d-flex align-items-center">
-                            <img src="./img/peterparker.jpg" class="rounded-circle" alt="peterparker in spiderman">
-                            <div class="text px-2">
-                                <div class="d-flex justify-content-between"> 
-                                    <div class="user-name">
-                                        Peter Parker
-                                    </div>
-                                    <div class="time">
-                                        12:00
-                                    </div>
-                                </div>
-                                <div class="last-massage">
-                                    Ultimo messaggio inviato
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item d-flex align-items-center">
-                            <img src="./img/shuri.jpg" class="rounded-circle" alt="shuri in blackpanther">
-                            <div class="text px-2">
-                                <div class="d-flex justify-content-between"> 
-                                    <div class="user-name">
-                                        Shuri 
-                                    </div>
-                                    <div class="time">
-                                        12:00
-                                    </div>
-                                </div>
-                                <div class="last-massage">
-                                    Ultimo messaggio inviato
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item d-flex align-items-center">
-                            <img src="./img/thanos.jpg" class="rounded-circle" alt="thanos">
-                            <div class="text px-2">
-                                <div class="d-flex justify-content-between"> 
-                                    <div class="user-name">
-                                        Thanos
-                                    </div>
-                                    <div class="time">
-                                        12:00
-                                    </div>
-                                </div>
-                                <div class="last-massage">
-                                    Ultimo messaggio inviato
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item d-flex align-items-center">
-                            <img src="./img/tonystark.jpg" class="rounded-circle" alt="tonystark">
-                            <div class="text px-2">
-                                <div class="d-flex justify-content-between"> 
-                                    <div class="user-name">
-                                        Tony Stark
-                                    </div>
-                                    <div class="time">
-                                        12:00
-                                    </div>
-                                </div>
-                                <div class="last-massage">
-                                    Ultimo messaggio inviato
-                                </div>
-                            </div>
-                        </li> -->
-                    </ul>
+                    </ul>   
                 </div>
             </section>
-            <section class="chat-section flex-grow-1 d-flex flex-column">
+            <section class="chat-section d-flex flex-grow-1 flex-column">
                 <div class="bar">
                     <ul class="list-group list-group-flush d-flex justify-content-between">
-                        <ul class="list-group list-group-flush d-flex justify-content-between">
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <img src="./img/shuri.jpg" class="rounded-circle" alt="shuri in blackpanther">
-                                <div class="text px-2">
-                                    <div class="user-name">
-                                        Shuri
-                                    </div>
-                                    <div class="last-access">
-                                        Ultimo accesso di oggi alle 12:00
-                                    </div>
+                        <li class="list-group-item active-contact align-items-center justify-content-between">
+                            <img :src="arrayContacts[currentContact].avatar" class="rounded-circle" alt="shuri in blackpanther">
+                            <div class="text px-2">
+                                <div class="user-name">
+                                    {{arrayContacts[currentContact].name}}
                                 </div>
-                                <div class="button d-flex gap-2">
-                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                    <i class="fa-solid fa-paperclip"></i>
-                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                <div class="last-access">
+                                    Ultimo accesso di oggi alle 12:00
                                 </div>
-                            </li>
-                        </ul>
+                            </div>
+                            <div class="button d-flex gap-2">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <i class="fa-solid fa-paperclip"></i>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
+                        </li>
                     </ul>
                 </div>
                 <div class="chat flex-grow-1">
     
                     <div class="card card-green mb-1">
                         <div class="card-body">
-                          <p class="card-text">Hai portato duori il cane?</p>
+                          <p class="card-text">
+                            <!-- {{arrayContacts[currentContact].massages[0].message}} -->
+                          </p>
                         </div>
                         <div class="time">
                             11:20
@@ -243,7 +114,9 @@
     
                     <div class="card card-green mb-1">
                         <div class="card-body">
-                          <p class="card-text">e il pranzo, lo hai preparato?</p>
+                          <p class="card-text">
+                            <!-- {{arrayContacts[currentContact].massages[1].message}} -->
+                          </p>
                         </div>
                         <div class="time">
                             11:22
@@ -252,7 +125,9 @@
     
                     <div class="card mb-1">
                         <div class="card-body">
-                          <p class="card-text">Tutto fatto!</p>
+                          <p class="card-text">
+                            <!-- {{arrayContacts[currentContact].massages[2].message}} -->
+                          </p>
                         </div>
                         <div class="time">
                             11:30

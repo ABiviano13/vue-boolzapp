@@ -169,16 +169,26 @@ contacts = [
             }
         ],
     }
-]    
+] 
+
+const currentIndex = 0;
+
 
 createApp({
     data() {
         return {
             arrayContacts: contacts,
+            currentContact: currentIndex, 
+            className: ''
         }
     },
     methods: {
-
+        setCurrentContact(indice){
+            console.log('cliccato');
+            if (indice === this.currentContact) {
+                this.className == ' active'
+            }
+        },
     }
 }).mount('#app')
 
