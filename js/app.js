@@ -71,7 +71,7 @@ contacts = [
     },
 
     {
-        name: 'Carol Darverson',
+        name: 'Carol Darvers',
         avatar: './img/captainmarvel.jpg',
         visible: true,
         messages: [
