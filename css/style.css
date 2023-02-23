@@ -1,6 +1,7 @@
 :root{
     --var--green: #009688;
     ---var--beigegreen: #dadbd3;
+    --var--lightgreen: #d5f9ba;
     --var--lightgray: #eaeaea;
     --var--white: white;
     --var--gray: rgba(128, 128, 128, 0.694);
@@ -116,7 +117,8 @@ img{
     width: 5%;
 }
 
-.input-chat{
+.input-chat,
+.card{
     position: relative;
 }
 
@@ -128,8 +130,28 @@ img{
     transform: translate(-50%, -50%);
 }
 
-.input-chat .col-1{
+.input-chat .col-1,
+.input-chat .col-2{
     font-size: 25px;
     color: var(--var--darkgray);
     text-align: center;
+}
+
+.chat .card{
+    --bs-card-border-width: none;
+    max-width: 15rem;
+    max-height: 53px;
+}
+
+.card .time{
+    font-size: 10px;
+    position:absolute;
+    bottom: 0;
+    right: 2px;
+}
+
+.card.card-green{
+    background-color: var(--var--lightgreen);
+    position: relative;
+    left: 480px;
 }
