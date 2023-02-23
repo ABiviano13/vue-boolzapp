@@ -62,6 +62,10 @@ img{
     border: none;
 }
 
+.chat-contacts .list-group-item:hover{
+    background-color: var(--var--lightgray);
+}
+
 .button{
     color: var(--var--gray);
 }
@@ -75,7 +79,6 @@ img{
 
 .a-text{
     text-decoration: underline;
-    color: var(--var--gray);
 }
 
 .bell{
@@ -109,13 +112,17 @@ img{
 }
 
 .last-massage,
-.time,
-.last-access{
+.time{
     color: var(--var--gray);
 }
 
 .chat-section img{
     width: 5%;
+}
+
+.a-text,
+.last-access{
+    color: var(--var--darkgray);
 }
 
 .input-chat,
