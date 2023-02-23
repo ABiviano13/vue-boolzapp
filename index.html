@@ -6,252 +6,275 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://kit.fontawesome.com/b59a747f9a.js" crossorigin="anonymous"></script>
     <title>Boolzapp</title>
 </head>
 <body>
 
-    <div class="aesthetic-container">
-        <div class="aesthetic-header"></div>
-        <div class="aesthetic-main"></div>
-    </div>
-    <div class="container-main d-flex">
-        <section class="scrollbar-contacts d-flex flex-column">
-            <div class="bar bar-me">
-                <ul class="list-group list-group-flush d-flex justify-content-between">
-                    <li class="list-group-item d-flex align-items-center justify-content-between">
-                        <div class="text px-2 d-flex align-items-center gap-2">
-                            <img src="./img/wanda.jpg" class="rounded-circle" alt="wanda">
-                            <div class="user-name">
-                                Wanda (me)
-                            </div>
-                        </div>
-                        <div class="button d-flex gap-2">
-                            <i class="fa-solid fa-circle-notch"></i>
-                            <i class="fa-solid fa-message"></i>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="notificationsonoff d-flex align-items-center">
-                <i class="bell fa-regular fa-bell-slash rounded-circle"></i>
-                <div class="text-notification px-2">
-                    <div class="text">
-                        Ricevi notifiche di nuovi messaggi
-                    </div>
-                    <a class="a-text">
-                        Attiva notifiche Desktop
-                    </a>
-                </div>
-            </div>
-            <div class="chat-contacts flex-grow-1">
-                <div class="input-group input-group-sm">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">
-                        <i class="button fa-solid fa-magnifying-glass"></i>
-                    </span>
-                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Cerca o inizia una nuova chat">
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item d-flex align-items-center">
-                        <img src="./img/blackpanther.jpg" class="rounded-circle" alt="blackpanther">
-                        <div class="text px-2">
-                            <div class="d-flex justify-content-between"> 
-                                <div class="user-name">
-                                    Black panther
-                                </div>
-                                <div class="time">
-                                    12:00
-                                </div>
-                            </div>
-                            <div class="last-massage">
-                                Ultimo messaggio inviato
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item d-flex align-items-center">
-                        <img src="./img/blackwidow.jpg" class="rounded-circle" alt="blackwidow">
-                        <div class="text px-2">
-                            <div class="d-flex justify-content-between"> 
-                                <div class="user-name">
-                                    Black widow
-                                </div>
-                                <div class="time">
-                                    12:00
-                                </div>
-                            </div>
-                            <div class="last-massage">
-                                Ultimo messaggio inviato
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item d-flex align-items-center">
-                        <img src="./img/capitanamerica.jpg" class="rounded-circle" alt="capitanamerica">
-                        <div class="text px-2">
-                            <div class="d-flex justify-content-between"> 
-                                <div class="user-name">
-                                    Capitan America
-                                </div>
-                                <div class="time">
-                                    12:00
-                                </div>
-                            </div>
-                            <div class="last-massage">
-                                Ultimo messaggio inviato
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item d-flex align-items-center">
-                        <img src="./img/captainmarvel.jpg" class="rounded-circle" alt="capitanmarvel">
-                        <div class="text px-2">
-                            <div class="d-flex justify-content-between"> 
-                                <div class="user-name">
-                                    Capitan Marvel
-                                </div>
-                                <div class="time">
-                                    12:00
-                                </div>
-                            </div>
-                            <div class="last-massage">
-                                Ultimo messaggio inviato
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item d-flex align-items-center">
-                        <img src="./img/peterparker.jpg" class="rounded-circle" alt="peterparker in spiderman">
-                        <div class="text px-2">
-                            <div class="d-flex justify-content-between"> 
-                                <div class="user-name">
-                                    Peter Parker
-                                </div>
-                                <div class="time">
-                                    12:00
-                                </div>
-                            </div>
-                            <div class="last-massage">
-                                Ultimo messaggio inviato
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item d-flex align-items-center">
-                        <img src="./img/shuri.jpg" class="rounded-circle" alt="shuri in blackpanther">
-                        <div class="text px-2">
-                            <div class="d-flex justify-content-between"> 
-                                <div class="user-name">
-                                    Shuri Black panther
-                                </div>
-                                <div class="time">
-                                    12:00
-                                </div>
-                            </div>
-                            <div class="last-massage">
-                                Ultimo messaggio inviato
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item d-flex align-items-center">
-                        <img src="./img/thanos.jpg" class="rounded-circle" alt="thanos">
-                        <div class="text px-2">
-                            <div class="d-flex justify-content-between"> 
-                                <div class="user-name">
-                                    Thanos
-                                </div>
-                                <div class="time">
-                                    12:00
-                                </div>
-                            </div>
-                            <div class="last-massage">
-                                Ultimo messaggio inviato
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item d-flex align-items-center">
-                        <img src="./img/tonystark.jpg" class="rounded-circle" alt="tonystark">
-                        <div class="text px-2">
-                            <div class="d-flex justify-content-between"> 
-                                <div class="user-name">
-                                    Tony Stark
-                                </div>
-                                <div class="time">
-                                    12:00
-                                </div>
-                            </div>
-                            <div class="last-massage">
-                                Ultimo messaggio inviato
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <section class="chat-section flex-grow-1 d-flex flex-column">
-            <div class="bar">
-                <ul class="list-group list-group-flush d-flex justify-content-between">
+    <div id="app">
+
+        <div class="aesthetic-container">
+            <div class="aesthetic-header"></div>
+            <div class="aesthetic-main"></div>
+        </div>
+        <div class="container-main d-flex">
+            <section class="scrollbar-contacts d-flex flex-column">
+                <div class="bar bar-me">
                     <ul class="list-group list-group-flush d-flex justify-content-between">
                         <li class="list-group-item d-flex align-items-center justify-content-between">
-                            <img src="./img/shuri.jpg" class="rounded-circle" alt="shuri in blackpanther">
-                            <div class="text px-2">
+                            <div class="text px-2 d-flex align-items-center gap-2">
+                                <img src="./img/wanda.jpg" class="rounded-circle" alt="wanda">
                                 <div class="user-name">
-                                    Shuri Black panther
-                                </div>
-                                <div class="last-massage">
-                                    Ultimo accesso di oggi alle 12:00
+                                    Wanda
                                 </div>
                             </div>
                             <div class="button d-flex gap-2">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                                <i class="fa-solid fa-paperclip"></i>
+                                <i class="fa-solid fa-circle-notch"></i>
+                                <i class="fa-solid fa-message"></i>
                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                             </div>
                         </li>
                     </ul>
-                </ul>
-            </div>
-            <div class="chat flex-grow-1">
-
-                <div class="card card-green mt-5 mb-2 ms-5 ">
-                    <div class="card-body">
-                      <p class="card-text">Hai portato duori il cane?</p>
-                    </div>
-                    <div class="time">
-                        11:20
+                </div>
+                <div class="notificationsonoff d-flex align-items-center">
+                    <i class="bell fa-regular fa-bell-slash rounded-circle"></i>
+                    <div class="text-notification px-2">
+                        <div class="text">
+                            Ricevi notifiche di nuovi messaggi
+                        </div>
+                        <a class="a-text">
+                            Attiva notifiche Desktop
+                        </a>
                     </div>
                 </div>
-
-                <div class="card card-green mb-3 ms-5 ">
-                    <div class="card-body">
-                      <p class="card-text">e il pranzo, lo hai preparato?</p>
+                <div class="chat-contacts flex-grow-1">
+                    <div class="input-group input-group-sm">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">
+                            <i class="button fa-solid fa-magnifying-glass"></i>
+                        </span>
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Cerca o inizia una nuova chat">
                     </div>
-                    <div class="time">
-                        11:22
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex align-items-center" v-for="contact in arrayContacts">
+                            <img :src="contact.avatar" class="rounded-circle" alt="">
+                            <div class="text px-2">
+                                <div class="d-flex justify-content-between"> 
+                                    <div class="user-name">
+                                        {{contact.name}}
+                                    </div>
+                                    <div class="time">
+                                        12:00
+                                    </div>
+                                </div>
+                                <div class="last-massage">
+                                    Ultimo messaggio inviato
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- <li class="list-group-item d-flex align-items-center">
+                            <img src="./img/blackpanther.jpg" class="rounded-circle" alt="blackpanther">
+                            <div class="text px-2">
+                                <div class="d-flex justify-content-between"> 
+                                    <div class="user-name">
+                                        T'Challa
+                                    </div>
+                                    <div class="time">
+                                        12:00
+                                    </div>
+                                </div>
+                                <div class="last-massage">
+                                    Ultimo messaggio inviato
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <img src="./img/blackwidow.jpg" class="rounded-circle" alt="blackwidow">
+                            <div class="text px-2">
+                                <div class="d-flex justify-content-between"> 
+                                    <div class="user-name">
+                                        Natasha Romanoff
+                                    </div>
+                                    <div class="time">
+                                        12:00
+                                    </div>
+                                </div>
+                                <div class="last-massage">
+                                    Ultimo messaggio inviato
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <img src="./img/capitanamerica.jpg" class="rounded-circle" alt="capitanamerica">
+                            <div class="text px-2">
+                                <div class="d-flex justify-content-between"> 
+                                    <div class="user-name">
+                                        Steve Rogers
+                                    </div>
+                                    <div class="time">
+                                        12:00
+                                    </div>
+                                </div>
+                                <div class="last-massage">
+                                    Ultimo messaggio inviato
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <img src="./img/captainmarvel.jpg" class="rounded-circle" alt="capitanmarvel">
+                            <div class="text px-2">
+                                <div class="d-flex justify-content-between"> 
+                                    <div class="user-name">
+                                        Carol Darverson
+                                    </div>
+                                    <div class="time">
+                                        12:00
+                                    </div>
+                                </div>
+                                <div class="last-massage">
+                                    Ultimo messaggio inviato
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <img src="./img/peterparker.jpg" class="rounded-circle" alt="peterparker in spiderman">
+                            <div class="text px-2">
+                                <div class="d-flex justify-content-between"> 
+                                    <div class="user-name">
+                                        Peter Parker
+                                    </div>
+                                    <div class="time">
+                                        12:00
+                                    </div>
+                                </div>
+                                <div class="last-massage">
+                                    Ultimo messaggio inviato
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <img src="./img/shuri.jpg" class="rounded-circle" alt="shuri in blackpanther">
+                            <div class="text px-2">
+                                <div class="d-flex justify-content-between"> 
+                                    <div class="user-name">
+                                        Shuri 
+                                    </div>
+                                    <div class="time">
+                                        12:00
+                                    </div>
+                                </div>
+                                <div class="last-massage">
+                                    Ultimo messaggio inviato
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <img src="./img/thanos.jpg" class="rounded-circle" alt="thanos">
+                            <div class="text px-2">
+                                <div class="d-flex justify-content-between"> 
+                                    <div class="user-name">
+                                        Thanos
+                                    </div>
+                                    <div class="time">
+                                        12:00
+                                    </div>
+                                </div>
+                                <div class="last-massage">
+                                    Ultimo messaggio inviato
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <img src="./img/tonystark.jpg" class="rounded-circle" alt="tonystark">
+                            <div class="text px-2">
+                                <div class="d-flex justify-content-between"> 
+                                    <div class="user-name">
+                                        Tony Stark
+                                    </div>
+                                    <div class="time">
+                                        12:00
+                                    </div>
+                                </div>
+                                <div class="last-massage">
+                                    Ultimo messaggio inviato
+                                </div>
+                            </div>
+                        </li> -->
+                    </ul>
+                </div>
+            </section>
+            <section class="chat-section flex-grow-1 d-flex flex-column">
+                <div class="bar">
+                    <ul class="list-group list-group-flush d-flex justify-content-between">
+                        <ul class="list-group list-group-flush d-flex justify-content-between">
+                            <li class="list-group-item d-flex align-items-center justify-content-between">
+                                <img src="./img/shuri.jpg" class="rounded-circle" alt="shuri in blackpanther">
+                                <div class="text px-2">
+                                    <div class="user-name">
+                                        Shuri
+                                    </div>
+                                    <div class="last-massage">
+                                        Ultimo accesso di oggi alle 12:00
+                                    </div>
+                                </div>
+                                <div class="button d-flex gap-2">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <i class="fa-solid fa-paperclip"></i>
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </div>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+                <div class="chat flex-grow-1">
+    
+                    <div class="card card-green mt-5 mb-2 ms-5 ">
+                        <div class="card-body">
+                          <p class="card-text">Hai portato duori il cane?</p>
+                        </div>
+                        <div class="time">
+                            11:20
+                        </div>
+                    </div>
+    
+                    <div class="card card-green mb-3 ms-5 ">
+                        <div class="card-body">
+                          <p class="card-text">e il pranzo, lo hai preparato?</p>
+                        </div>
+                        <div class="time">
+                            11:22
+                        </div>
+                    </div>
+    
+                    <div class="card mb-3 ms-5">
+                        <div class="card-body">
+                          <p class="card-text">Tutto fatto!</p>
+                        </div>
+                        <div class="time">
+                            11:30
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="input-chat">
+                    <div class="row align-items-center">
+                        <div class="col-1">
+                            <i class="fa-regular fa-face-smile"></i>
+                        </div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="colFormLabel" placeholder="Scrivi un messaggio">
+                          </div>
+                        <div class="col-1">
+                            <i class="fa-solid fa-microphone"></i>
+                        </div>
                     </div>
                 </div>
+            </section>
+        </div>
 
-                <div class="card mb-3 ms-5">
-                    <div class="card-body">
-                      <p class="card-text">Tutto fatto!</p>
-                    </div>
-                    <div class="time">
-                        11:30
-                    </div>
-                </div>
-
-            </div>
-            <div class="input-chat">
-                <div class="row align-items-center">
-                    <div class="col-1">
-                        <i class="fa-regular fa-face-smile"></i>
-                    </div>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="colFormLabel" placeholder="Scrivi un messaggio">
-                      </div>
-                    <div class="col-1">
-                        <i class="fa-solid fa-microphone"></i>
-                    </div>
-                </div>
-            </div>
-        </section>
     </div>
  
+    <script src="./js/app.js"></script>
 </body>
 </html>
