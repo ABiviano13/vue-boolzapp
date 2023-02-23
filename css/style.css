@@ -144,6 +144,7 @@ img{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    --bs-gutter-x: 0;
 }
 
 .input-chat .col-1,
@@ -161,16 +162,16 @@ img{
 
 .chat .card{
     --bs-card-border-width: none;
-    border-radius: 8px;
     max-width: 20rem;
-    max-height: 53px;
+    border-radius: 8px;
     align-self: flex-start;
-    width: 20rem;
+    height: 3rem;
+    width: 18rem;
 }
 
 .card .time{
     font-size: 10px;
-    position:absolute;
+    position: absolute;
     bottom: 0;
     right: 2px;
 }
