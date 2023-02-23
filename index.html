@@ -101,10 +101,10 @@
                 </div>
                 <div class="chat flex-grow-1">
     
-                    <div class="card card-green mb-1">
+                    <div class="card mb-1" :class="(message.status !== 'received' ? 'sent' : '')" v-for="(message, index) in arrayContacts[currentContact].messages">
                         <div class="card-body">
                           <p class="card-text">
-                            <!-- {{arrayContacts[currentContact].massages[0].message}} -->
+                            {{message.message}}
                           </p>
                         </div>
                         <div class="time">
@@ -112,27 +112,6 @@
                         </div>
                     </div>
     
-                    <div class="card card-green mb-1">
-                        <div class="card-body">
-                          <p class="card-text">
-                            <!-- {{arrayContacts[currentContact].massages[1].message}} -->
-                          </p>
-                        </div>
-                        <div class="time">
-                            11:22
-                        </div>
-                    </div>
-    
-                    <div class="card mb-1">
-                        <div class="card-body">
-                          <p class="card-text">
-                            <!-- {{arrayContacts[currentContact].massages[2].message}} -->
-                          </p>
-                        </div>
-                        <div class="time">
-                            11:30
-                        </div>
-                    </div>
     
                 </div>
                 <div class="input-chat">

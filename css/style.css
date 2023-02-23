@@ -164,7 +164,6 @@ img{
     --bs-card-border-width: none;
     max-width: 20rem;
     border-radius: 8px;
-    align-self: flex-start;
     height: 3rem;
     width: 18rem;
 }
@@ -176,10 +175,12 @@ img{
     right: 4px;
 }
 
-.card.card-green{
+.card.sent{
     background-color: var(--var--lightgreen);
     align-self: flex-end;
 }
+
+
 
 
 .chat-section .list-group-item.active-contact{
