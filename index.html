@@ -48,7 +48,7 @@
             <div class="chat-contacts flex-grow-1">
                 <div class="input-group input-group-sm">
                     <span class="input-group-text" id="inputGroup-sizing-sm">
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="button fa-solid fa-magnifying-glass"></i>
                     </span>
                     <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Cerca o inizia una nuova chat">
                 </div>
@@ -122,7 +122,7 @@
                         <div class="text px-2">
                             <div class="d-flex justify-content-between"> 
                                 <div class="user-name">
-                                    Peter Parker Spiderman
+                                    Peter Parker
                                 </div>
                                 <div class="time">
                                     12:00
@@ -170,7 +170,7 @@
                         <div class="text px-2">
                             <div class="d-flex justify-content-between"> 
                                 <div class="user-name">
-                                    Tony Stark Iron man
+                                    Tony Stark
                                 </div>
                                 <div class="time">
                                     12:00
@@ -186,13 +186,42 @@
         </section>
         <section class="chat-section flex-grow-1 d-flex flex-column">
             <div class="bar">
-                
+                <ul class="list-group list-group-flush d-flex justify-content-between">
+                    <ul class="list-group list-group-flush d-flex justify-content-between">
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <img src="./img/shuri.jpg" class="rounded-circle" alt="shuri in blackpanther">
+                            <div class="text px-2">
+                                <div class="user-name">
+                                    Shuri Black panther
+                                </div>
+                                <div class="last-massage">
+                                    Ultimo accesso di oggi alle 12:00
+                                </div>
+                            </div>
+                            <div class="button d-flex gap-2">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <i class="fa-solid fa-paperclip"></i>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </ul>
             </div>
             <div class="chat flex-grow-1">
 
             </div>
             <div class="input-chat">
-
+                <div class="row align-items-center">
+                    <div class="col-1">
+                        <i class="fa-regular fa-face-smile"></i>
+                    </div>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="colFormLabel" placeholder="Scrivi un messaggio">
+                      </div>
+                    <div class="col-1">
+                        <i class="fa-solid fa-microphone"></i>
+                    </div>
+                </div>
             </div>
         </section>
     </div>

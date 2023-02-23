@@ -2,9 +2,9 @@
     --var--green: #009688;
     ---var--beigegreen: #dadbd3;
     --var--lightgray: #eaeaea;
-    --var--lightgraydark: lightgray;
     --var--white: white;
-    --var--gray: gray;
+    --var--gray: rgba(128, 128, 128, 0.694);
+    --var--darkgray: #6b7376;
     --var--skyblue: #8edafd;
     --var--beige: #f3eeea;
 }
@@ -14,7 +14,7 @@ button{
 }
 
 img{
-    width: 10%;
+    width: 12%;
     aspect-ratio: 1/1;
     object-fit: cover;
     object-position: center;
@@ -51,11 +51,11 @@ img{
 .bar, 
 .notificationsonoff,
 .input-chat{
-    flex-basis: 5%;
+    flex-basis: 60px;
 }
 
 .bar,
-.bar-me .list-group-item{
+.bar .list-group-item{
     background-color: var(--var--lightgray);
     border: none;
 }
@@ -90,6 +90,8 @@ img{
 
 .chat{
     overflow: scroll;
+    background-image: url(.././img/IMG_8609.JPG);
+    background-size: contain;
 }
 
 .input-chat{
@@ -105,6 +107,29 @@ img{
 }
 
 .last-massage,
-.time{
-    color: var(--var--lightgraydark);
+.time,
+.last-access{
+    color: var(--var--gray);
+}
+
+.chat-section img{
+    width: 5%;
+}
+
+.input-chat{
+    position: relative;
+}
+
+.input-chat .row{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.input-chat .col-1{
+    font-size: 25px;
+    color: var(--var--darkgray);
+    text-align: center;
 }
