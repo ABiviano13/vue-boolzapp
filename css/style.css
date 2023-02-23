@@ -10,6 +10,10 @@
     --var--beige: #f3eeea;
 }
 
+#app{
+    font-family: 'Open Sans', sans-serif;
+}
+
 button{
     border: none;
 }
@@ -60,6 +64,10 @@ img{
 .bar .list-group-item{
     background-color: var(--var--lightgray);
     border: none;
+}
+
+.chat-contacts{
+    overflow: scroll;
 }
 
 .chat-contacts .list-group-item:hover{
@@ -145,10 +153,19 @@ img{
     text-align: center;
 }
 
+.chat{
+    padding: 50px 95px;
+    display: flex;
+    flex-direction: column;
+}
+
 .chat .card{
     --bs-card-border-width: none;
-    max-width: 15rem;
+    border-radius: 8px;
+    max-width: 20rem;
     max-height: 53px;
+    align-self: flex-start;
+    width: 20rem;
 }
 
 .card .time{
@@ -160,6 +177,5 @@ img{
 
 .card.card-green{
     background-color: var(--var--lightgreen);
-    position: relative;
-    left: 480px;
+    align-self: flex-end;
 }
