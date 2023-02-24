@@ -99,7 +99,7 @@
             <!-- CHAT -->
             <section class="chat-section d-flex flex-grow-1 flex-column">
 
-                <div class="bar">
+                <div class="bar flex-shrink-0">
 
                     <ul class="list-group list-group-flush d-flex justify-content-between">
                         <li class="list-group-item active-contact align-items-center justify-content-between">
@@ -139,13 +139,17 @@
                     </div>
     
                 </div>
-                <div class="input-chat">
+                <div class="input-chat flex-shrink-0">
                     <div class="row align-items-center">
                         <div class="col-1">
                             <i class="fa-regular fa-face-smile"></i>
                         </div>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="colFormLabel" placeholder="Scrivi un messaggio">
+                            <input type="text" class="form-control" id="colFormLabel" 
+                            placeholder="Scrivi un messaggio"
+                            v-model="inputValue"
+                            @keyup.enter="addTask"
+                            >
                           </div>
                         <div class="col-1">
                             <i class="fa-solid fa-microphone"></i>

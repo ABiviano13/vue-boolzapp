@@ -179,6 +179,7 @@ createApp({
         return {
             arrayContacts: contacts,
             currentContact: currentIndex, 
+            inputValue: '',
         }
     },
     methods: {
@@ -186,8 +187,35 @@ createApp({
             console.log('cliccato')
             this.currentContact = index;
         },
+
+        addTask(){
+            let textInputMessage = this.inputValue.trim();
+
+            if(textInputMessage === ''){
+                this.inputValue = '';
+                return
+            };
+
+            const newMessage = {
+                date: '10/01/2020 15:55:00',
+                message: textInputMessage,
+                status: 'sent'
+            };
+
+            console.log(newMessage);
+
+            this.arrayContacts[currentIndex].messages.push(newMessage);
+            this.inputValue = '';
+
+        },
     }
 }).mount('#app')
+
+window.addEventListener('keyup', (enter) => {
+	if (enter.key === 'Enter') {
+		// console.log('enter')
+	}
+})
 
 
 
