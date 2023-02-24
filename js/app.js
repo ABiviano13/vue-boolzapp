@@ -188,8 +188,8 @@ createApp({
             this.currentContact = index;
         },
 
-        addTask(){
-            let textInputMessage = this.inputValue.trim();
+        addMessage(index){
+            const textInputMessage = this.inputValue.trim();
 
             if(textInputMessage === ''){
                 this.inputValue = '';
@@ -204,10 +204,23 @@ createApp({
 
             console.log(newMessage);
 
-            this.arrayContacts[currentIndex].messages.push(newMessage);
+            this.arrayContacts[this.currentContact].messages.push(newMessage);
             this.inputValue = '';
 
+            setTimeout(this.responseMessage, 1000);
+
         },
+
+        responseMessage(){
+            const textResponseMessage = {
+                date: '10/01/2020 15:55:00',
+                message: 'Okay',
+                status: 'received'
+            };
+            console.log(textResponseMessage);
+
+            this.arrayContacts[this.currentContact].messages.push(textResponseMessage);
+        }
     }
 }).mount('#app')
 
