@@ -48,7 +48,7 @@ img{
     font-size: 13px;
 }
 
-.scrollbar-contacts{
+.sidebar-contacts{
     border-right: 1px solid rgba(128, 128, 128, 0.373);
     width: 540px;
     background-color: var(--var--white);

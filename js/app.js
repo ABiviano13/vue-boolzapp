@@ -182,14 +182,9 @@ createApp({
         }
     },
     methods: {
-        // isTime(){
-        //     const arrayDate = this.arrayContacts.messages.date.split('');
-        //     console.log(arrayDate)
-        // },
-
         setCurrentContact(index){
             console.log('cliccato')
-            return this.currentContact = index;
+            this.currentContact = index;
         },
     }
 }).mount('#app')

@@ -22,9 +22,14 @@
             <div class="aesthetic-main"></div>
         </div>
         <div class="container-main d-flex">
-            <section class="scrollbar-contacts d-flex flex-column">
+
+            <!-- CONTACT -->
+            <section class="sidebar-contacts d-flex flex-column flex-shrink-0">
+
                 <div class="bar bar-me">
+
                     <ul class="list-group list-group-flush d-flex justify-content-between">
+
                         <li class="list-group-item d-flex align-items-center justify-content-between">
                             <div class="text px-2 d-flex align-items-center gap-2">
                                 <img src="./img/wanda.jpg" class="rounded-circle" alt="wanda">
@@ -38,8 +43,11 @@
                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                             </div>
                         </li>
+
                     </ul>
+
                 </div>
+
                 <div class="notificationsonoff d-flex align-items-center">
                     <i class="bell fa-regular fa-bell-slash rounded-circle"></i>
                     <div class="text-notification px-2">
@@ -51,7 +59,9 @@
                         </a>
                     </div>
                 </div>
+
                 <div class="chat-contacts flex-grow-1">
+
                     <div class="input-group input-group-sm">
                         <span class="input-group-text" id="inputGroup-sizing-sm">
                             <i class="button fa-solid fa-magnifying-glass"></i>
@@ -59,7 +69,11 @@
                         <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Cerca o inizia una nuova chat">
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item d-flex align-items-center" v-for="(contact, index) in arrayContacts" @click="setCurrentContact(index)">
+
+                        <li class="list-group-item d-flex align-items-center" 
+                        v-for="(contact, index) in arrayContacts" 
+                        @click="setCurrentContact(index)"
+                        >
                             <img :src="contact.avatar" class="rounded-circle" alt="">
                             <div class="text px-2">
                                 <div class="d-flex justify-content-between"> 
@@ -75,13 +89,21 @@
                                 </div>
                             </div>
                         </li>
+
                     </ul>   
+
                 </div>
+
             </section>
+            
+            <!-- CHAT -->
             <section class="chat-section d-flex flex-grow-1 flex-column">
+
                 <div class="bar">
+
                     <ul class="list-group list-group-flush d-flex justify-content-between">
                         <li class="list-group-item active-contact align-items-center justify-content-between">
+
                             <img :src="arrayContacts[currentContact].avatar" class="rounded-circle" alt="shuri in blackpanther">
                             <div class="text px-2">
                                 <div class="user-name">
@@ -96,12 +118,16 @@
                                 <i class="fa-solid fa-paperclip"></i>
                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                             </div>
+
                         </li>
                     </ul>
+
                 </div>
                 <div class="chat flex-grow-1">
     
-                    <div class="card mb-1 " :class=" message.status !== 'received' ? 'sent' : '' " v-for="(message, index) in arrayContacts[currentContact].messages">
+                    <div class="card mb-1 " :class=" message.status == 'sent' ? 'sent' : '' " 
+                    v-for="(message, index) in arrayContacts[currentContact].messages"
+                    >
                         <div class="card-body">
                           <p class="card-text">
                             {{message.message}}
@@ -126,6 +152,7 @@
                         </div>
                     </div>
                 </div>
+
             </section>
         </div>
 
