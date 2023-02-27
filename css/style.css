@@ -186,6 +186,8 @@ img{
     display: flex;
 }
 
-.chat-section .list-group-item{
+.chat-section .list-group-item,
+.hidden{
     display: none;
 }
+

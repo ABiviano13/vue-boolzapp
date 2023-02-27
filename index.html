@@ -66,12 +66,19 @@
                         <span class="input-group-text" id="inputGroup-sizing-sm">
                             <i class="button fa-solid fa-magnifying-glass"></i>
                         </span>
-                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Cerca o inizia una nuova chat">
+                        <input type="text" class="form-control" aria-label="Sizing example input" 
+                        aria-describedby="inputGroup-sizing-sm" placeholder="Cerca o inizia una nuova chat"
+                        v-model="inputValueContact"
+                        >
                     </div>
                     <ul class="list-group list-group-flush">
 
                         <li class="list-group-item d-flex align-items-center" 
                         v-for="(contact, index) in arrayContacts" 
+                        :class="{
+                            'active-contact' : index === currentContact,
+                            'hidden' : isHidden(contact),
+                        }"
                         @click="setCurrentContact(index)"
                         >
                             <img :src="contact.avatar" class="rounded-circle" alt="">
@@ -147,7 +154,7 @@
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="colFormLabel" 
                             placeholder="Scrivi un messaggio"
-                            v-model="inputValue"
+                            v-model="inputValueMessage"
                             @keyup.enter="addMessage"
                             >
                           </div>

@@ -179,22 +179,27 @@ createApp({
         return {
             arrayContacts: contacts,
             currentContact: currentIndex, 
-            inputValue: '',
+            inputValueMessage: '',
+            inputValueContact: ''
         }
     },
     methods: {
         setCurrentContact(index){
-            console.log('cliccato')
+            // console.log('cliccato')
             this.currentContact = index;
+            this.resetMessage()
         },
 
         addMessage(index){
-            const textInputMessage = this.inputValue.trim();
+            const textInputMessage = this.inputValueMessage.trim();
 
             if(textInputMessage === ''){
-                this.inputValue = '';
+                this.resetMessage()
                 return
             };
+
+            // const date = this.getDateAsAString('dd/LL/yyyy HH:mm:ss');
+            const activeContact = this.currentContact;
 
             const newMessage = {
                 date: '10/01/2020 15:55:00',
@@ -202,25 +207,47 @@ createApp({
                 status: 'sent'
             };
 
-            console.log(newMessage);
+            // console.log(newMessage);
 
-            this.arrayContacts[this.currentContact].messages.push(newMessage);
-            this.inputValue = '';
+            this.arrayContacts[activeContact].messages.push(newMessage);
+            this.resetMessage();
 
-            setTimeout(this.responseMessage, 1000);
+            setTimeout(this.responseMessage, 2000, activeContact);
 
         },
 
-        responseMessage(){
+        resetMessage(){
+            this.inputValueMessage = '';
+        },
+
+        responseMessage(index){
             const textResponseMessage = {
                 date: '10/01/2020 15:55:00',
                 message: 'Okay',
                 status: 'received'
             };
-            console.log(textResponseMessage);
+            // console.log(textResponseMessage);
 
-            this.arrayContacts[this.currentContact].messages.push(textResponseMessage);
+            this.arrayContacts[index].messages.push(textResponseMessage);
+        },
+
+        isHidden(contact) {
+            // const { name } = contact.toLowerCase();
+            const name = contact.name.toLowerCase();
+            console.log(name, this.inputValueContact);
+
+            const textInputContact = this.inputValueContact.trim().toLowerCase();
+
+            const result = !name.includes(textInputContact);
+            console.log(result);
+
+            return result
         }
+
+        // getDateAsAString(format = 'dd/LL/yyyy'){
+        //     const now = DateTime.now();
+        //     return now.toFormat(format);
+        // },
     }
 }).mount('#app')
 
